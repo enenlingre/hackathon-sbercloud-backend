@@ -20,7 +20,7 @@ async function bootstrap() {
   app.enableCors({ origin: '*', methods: [ 'POST', 'GET' ], credentials: false });
   app.useWebSocketAdapter(new RedisIoAdapter(app));
 
-  await app.listen(3001);
+  await app.listen(80);
   // console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();
