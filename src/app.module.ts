@@ -6,7 +6,6 @@ import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { ProductModule } from './product/product.module';
 import { EventsModule } from './events/events.module';
-
 @Module({
   imports: [
     AuthModule,
@@ -18,7 +17,7 @@ import { EventsModule } from './events/events.module';
       isGlobal: true,
     }),
     MongooseModule.forRoot(
-      process.env.MONGODB_WRITE_CONNECTION_STRING,
+      process.env.MONGODB_URI,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
