@@ -1,4 +1,4 @@
-services:
+setup:
   db: 
     image: mongo:latest
     volumes: 
