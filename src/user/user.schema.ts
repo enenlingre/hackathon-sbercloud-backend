@@ -10,5 +10,3 @@ export const UserSchema = new Schema({
     addressLine: { type: String, default: null },
   },
 });
-
-UserSchema.index({ tel: 1 }, { unique: true });
