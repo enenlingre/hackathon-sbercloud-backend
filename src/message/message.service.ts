@@ -39,7 +39,7 @@ export class MessageService {
 
   async findByTopicId(topicId: string): Promise<IMessage[]> {
     const topic = await this.topicService.findById(topicId);
-    const messages = await this.messageModel.find({ topic }).exec();
+    const messages = await this.messageModel.find({ 'topic._id': Types.ObjectId(topicId) }).exec();
 
     return messages;
   }
